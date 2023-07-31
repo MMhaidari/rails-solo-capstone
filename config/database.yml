@@ -20,10 +20,13 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: postgres
+  password: admin123
 
 development:
   <<: *default
-  database: rails_solo_capstone_development
+  database: rails_solo_capstone_development1
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_solo_capstone_test
+  database: rails_solo_capstone_test1
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: rails_solo_capstone_production
-  username: rails_solo_capstone
+  database: rails_solo_capstone_production1
+  username: rails_solo_capstone1
   password: <%= ENV["RAILS_SOLO_CAPSTONE_DATABASE_PASSWORD"] %>
