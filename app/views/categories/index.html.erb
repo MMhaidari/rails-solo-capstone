@@ -1,2 +1,12 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<br>
+<section>
+  <h2 class="text-center">CATEGORIES</h2>
+  <br>
+  <% @categories.each do |category| %>
+    <%= render 'shared/category', category: category %>
+  <% end %>
+  <br>
+  <div class="d-grid">
+    <%= link_to 'add a new category', new_category_path, class: 'btn btn-outline-dark btn-lg btn-block' %>
+  </div>
+</section>
