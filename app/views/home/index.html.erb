@@ -1,2 +1,9 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="py-5">
+  <div class="container text-center">
+    <h1 class="mb-4">CashMaster App</h1>
+    <div class="d-grid gap-3">
+      <%= link_to 'LOG IN', new_user_session_path, class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'SIGN UP', new_user_registration_path, class: 'btn btn-outline-dark btn-lg' %>
+    </div>
+  </div>
+</div>
