@@ -22,16 +22,10 @@ class TransactionEntriesController < ApplicationController
       @transaction_entry.categories << category
     end
 
-    respond_to do |format|
-      if @transaction_entry.save
-        format.html do
-          redirect_to category_transaction_entries_path(category_id), notice: 'Transaction created successfully!'
-        end
-        format.json { render :show, status: :created, location: @transaction_entry }
-      else
-        format.html { render :new, flash: { error: 'Transaction not created!' } }
-        format.json { render json: @transaction_entry.errors, status: :unprocessable_entity }
-      end
+    if @transaction_entry.save
+      redirect_to category_transaction_entries_path(category_id), notice: 'Transaction created successfully!'
+    else
+      render :new, flash: { error: 'Transaction not created!' }
     end
   end
 
