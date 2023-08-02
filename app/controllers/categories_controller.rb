@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = current_user.categories
+    @categories = current_user.categories.includes(:transaction_entries)
   end
 
   def new
@@ -11,15 +11,12 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user = current_user
 
-    respond_to do |format|
-      if @category.save
-        format.html { redirect_to categories_path, notice: 'Category created successfully!' }
-        format.json { render json: @category, status: :created }
-      else
-        puts @category.errors.full_messages
-        format.html { render :new, flash: { error: 'Category not created!' } }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
-      end
+    if @category.save
+      redirect_to categories_path, notice: 'Category created successfully!'
+    else
+      puts @category.errors.full_messages
+      flash.now[:error] = 'Category not created!'
+      render :new
     end
   end
 
