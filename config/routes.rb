@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'transaction_entries/index'
-  get 'transaction_entries/new'
-  get 'categories/index'
-  get 'categories/new'
   devise_for :users
 
   devise_scope :user do
