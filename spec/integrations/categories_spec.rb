@@ -4,8 +4,8 @@ RSpec.describe 'Categories Page', type: :feature do
   let!(:user) { User.create(name: 'test', email: 'test@test.com', password: 'password', confirmed_at: Time.now) }
 
   before do
-    @category1 = Category.create(user: user, name: 'food', icon: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg')
-    @category2 = Category.create(user: user, name: 'travel', icon: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg')
+    @category1 = Category.create(user:, name: 'food', icon: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg')
+    @category2 = Category.create(user:, name: 'travel', icon: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg')
 
     visit new_user_session_path
     fill_in 'Email', with: user.email

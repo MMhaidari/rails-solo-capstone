@@ -4,7 +4,7 @@ RSpec.describe 'Category', type: :model do
   let!(:user) { User.create(name: 'test', email: 'test@test.com', password: 'password') }
 
   before do
-    @category = Category.create(user: user, name: 'test', icon: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg')
+    @category = Category.create(user:, name: 'test', icon: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg')
   end
 
   it 'is valid with valid attributes' do
