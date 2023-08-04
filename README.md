@@ -134,6 +134,13 @@ We would like to thank Microverse and coding partners for the commitment and ded
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> I would like to thank [Microverse Inc](https://www.github.com/microverseinc) for providing the project requirements
+
+> I would like to thank [Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for providing the project design template
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
