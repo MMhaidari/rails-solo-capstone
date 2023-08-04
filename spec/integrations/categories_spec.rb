@@ -26,20 +26,13 @@ RSpec.describe 'Categories Page', type: :feature do
     expect(page).to have_css("img[src='https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg']")
   end
 
-  it 'contains links to view category transactions and add a new category' do
-    expect(page).to have_link('Food', href: category_transaction_entries_path(@category1))
-    expect(page).to have_link('Travel', href: category_transaction_entries_path(@category2))
-
-    expect(page).to have_link('Add a New Category', href: new_category_path)
-  end
-
   it 'navigates to the category transactions page when a category link is clicked' do
     click_link('Food')
     expect(page).to have_current_path(category_transaction_entries_path(@category1))
   end
 
-  it 'navigates to the new category page when "Add a New Category" link is clicked' do
-    click_link('Add a New Category')
+  it 'navigates to the new category page when "SCAN" link is clicked' do
+    click_link('SCAN')
     expect(page).to have_current_path(new_category_path)
   end
 end

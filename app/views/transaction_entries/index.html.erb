@@ -1,13 +1,31 @@
-<section class="container mt-4">
-  <h2 class="text-center">DETAILS</h2>
-  <div class="mt-4">
-    <h1><%= @category.name %> Transactions</h1>
-    <p>Total Amount: $<%= @total_sum %></p>
+<div class="container-fluid bg-primary text-white text-center mb-2 py-2 d-flex align-items-center">
+<a href="<%= categories_path %>">
+  <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.048"></g>
+    <g id="SVGRepo_iconCarrier">
+      <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="#ffffff" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+  </svg>
+  </a>
+  <h2 class="text-center flex-grow-1">DETAILS</h2>
+</div>
 
+
+
+<section class="container mt-4">
+<div class="d-flex align-items-center">
+  <div style="width: 50px; height: 50px;">
+    <%= image_tag @category.icon, alt: "Category Icon", class: "img-fluid", style: "max-width: 40px; max-height: 40px;" %>
+  </div>
+  <h2 class="ml-3"><%= @category.name %></h2>
+</div>
+  <div>
+    <p>Total Amount: $<%= @total_sum %></p>
     <% @transaction_entries.each do |transaction| %>
       <div class="card mb-3">
         <div class="card-body">
-          <h3 class="card-title"><%= transaction.name %></h3>
+          <h3 class="card-title"><%= transaction.name.capitalize %></h3>
           <p class="card-text">Amount: $<%= transaction.amount %></p>
         </div>
       </div>
@@ -16,6 +34,5 @@
 
   <div class="d-grid gap-2 mt-4">
     <%= link_to 'Add a New Transaction', new_category_transaction_entry_path(@category), class: 'btn btn-outline-dark' %>
-    <%= link_to 'Back', categories_path, class: 'btn btn-outline-primary' %>
   </div>
 </section>

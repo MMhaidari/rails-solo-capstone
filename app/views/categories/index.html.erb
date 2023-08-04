@@ -1,4 +1,5 @@
 <!-- Add Bootstrap classes -->
+<%= render "layouts/navbar" %>
 <section class="categories-container container mt-4">
   <h2 class="text-center">CATEGORIES</h2>
   <br>
@@ -18,7 +19,7 @@
     </div>
   <% end %>
   <br>
-  <div class="d-grid">
-    <%= link_to 'Add a New Category', new_category_path, class: 'btn btn-primary w-100' %>
+  <div class="d-grid coloring">
+    <%= link_to 'SCAN', new_category_path, class: 'scan-button' %>
   </div>
 </section>

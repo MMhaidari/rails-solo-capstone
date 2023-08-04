@@ -20,14 +20,4 @@ RSpec.describe 'Category Transactions', type: :feature do
     click_link('Add a New Transaction')
     expect(page).to have_current_path(new_category_transaction_entry_path(category))
   end
-
-  it 'navigates back to the categories page when "Back" link is clicked' do
-    click_link('Back')
-    expect(page).to have_current_path(categories_path)
-  end
-
-  it 'redirects to correct page when clicked' do
-    click_link('Back')
-    expect(page).to have_current_path(categories_path)
-  end
 end

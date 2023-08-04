@@ -1,7 +1,19 @@
+<div class="container-fluid bg-primary text-white text-center mb-2 py-2 d-flex align-items-center">
+<a href="<%= category_transaction_entries_path %>">
+  <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.048"></g>
+    <g id="SVGRepo_iconCarrier">
+      <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="#ffffff" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+  </svg>
+  </a>
+  <h2 class="text-center flex-grow-1">New Category Transaction</h2>
+</div>
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <h2 class="text-center">New Category Transaction</h2>
       <%= form_with(model: @transaction_entry, url: category_transaction_entries_path, method: :post) do |f| %>
         <div class="mb-3">
           <%= f.label :name, class: "form-label" %>
@@ -19,10 +31,6 @@
           <%= f.submit "Save", class: 'btn btn-outline-dark' %>
         </div>
       <% end %>
-      <br>
-      <div class="d-grid gap-2">
-        <%= link_to 'Back', categories_path, class: 'btn btn-outline-primary' %>
-      </div>
     </div>
   </div>
 </div>

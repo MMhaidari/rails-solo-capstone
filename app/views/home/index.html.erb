@@ -1,9 +1,7 @@
-<div class="py-5">
-  <div class="container text-center">
-    <h1 class="mb-4">CashMaster App</h1>
-    <div class="d-grid gap-3">
-      <%= link_to 'LOG IN', new_user_session_path, class: 'btn btn-primary btn-lg' %>
-      <%= link_to 'SIGN UP', new_user_registration_path, class: 'btn btn-secondary btn-lg' %>
-    </div>
+  <div class="main-container">
+    <h1 class="centered-heading">CashMaster App</h1>
   </div>
-</div>
+  <div class="footer-container">
+    <a href="<%= new_user_session_path %>" class="custom-btn">LOG IN</a>
+    <a href="<%= new_user_registration_path %>" class="custom-btn secondary">SIGN UP</a>
+  </div>
