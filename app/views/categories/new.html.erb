@@ -1,0 +1,35 @@
+<div class="container-fluid bg-primary text-white text-center mb-2 py-2 d-flex align-items-center">
+<a href="<%= categories_path %>">
+  <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.048"></g>
+    <g id="SVGRepo_iconCarrier">
+      <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="#ffffff" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+  </svg>
+  </a>
+  <h2 class="text-center flex-grow-1">Add new category</h2>
+</div>
+<br>
+<%= form_with model: @category do |f| %>
+  <div class="mx-3">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, autocomplete: 'name', class: 'form-control'%>
+    <% @category.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <br>
+  <div class="mx-3">
+    <%= f.label :icon %>
+    <%= f.text_field :icon, autofocus: true, autocomplete: 'icon', class: 'form-control'%>
+    <% @category.errors.full_messages_for(:icon).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <br>
+  <div class="d-grid mx-3">
+    <%= f.submit 'Save', class: "btn btn-primary w-100" %>
+  </div>
+  <br>
+<% end %>
