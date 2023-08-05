@@ -127,18 +127,11 @@ If you like this project, give it a star and share it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-We would like to thank Microverse and coding partners for the commitment and dedication to working and finishing the project.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > I would like to thank [Microverse Inc](https://www.github.com/microverseinc) for providing the project requirements
 
-> I would like to thank [Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for providing the project design template
+> I would like give credit to  Gregoire Vella the auther of original design and also thank to [Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for providing the project design template
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
