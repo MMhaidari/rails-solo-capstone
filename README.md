@@ -4,7 +4,6 @@
 
 </div>
 
-
 > # Transaction App
 
 # 📗 Table of Contents
